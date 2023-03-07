@@ -57,7 +57,12 @@ html, body {
 
 body{
     background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    min-width: 350px;
 }
+
+
 
 article figure img{
     border-top-right-radius: 10px;
@@ -81,7 +86,8 @@ article h1{
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
+    max-width: 295px;
 }
 
 article p:first-of-type{
@@ -97,7 +103,8 @@ article p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 1.5rem;
-    padding-right: 1rem;
+    max-width: 295px;
+    margin: 0 auto;
 }
 
 .product-description{
@@ -112,6 +119,7 @@ article p{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     display: inline-block;
+    margin-left: 1rem;
 }
 
 .old-price{
@@ -141,8 +149,45 @@ button::before{
     margin: 0 1rem;
 }
 
-@media screen (min-width 768px) {
+@media (min-width: 768px) {
+    body{
+        display: flex;
+        align-items: center;
+    }
     .wrapper{
         display: flex;
+        margin: 0 auto;
+        max-height: 450px;
+        width: 600px;
+    }
+
+    article figure{
+        width: 300px;
+    }
+
+    article figure{
+        background-image: url("./assets/img/image-product-desktop.jpg");
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    article article{
+        width: 236px;
+        margin: 0 auto;
+    }
+
+    article article h1, p, .product-description{
+        margin: 0 auto;
+        max-width: 236px;
+    }
+
+    article figure img{
+        display: none;
+    }
+
+    .wrapper{
+        max-width: 600px;
     }
 }
